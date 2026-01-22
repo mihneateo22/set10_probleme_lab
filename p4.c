@@ -59,7 +59,7 @@ int main()
     fread(&m, sizeof(int), 1, fb);
     b = malloc(sizeof(int) * n * m);
     fread(b, sizeof(int), n * m, fb);
-    
+
     for(i = 0; i < n; i++)
     {
         for(j = 0; j < m; j++)
@@ -72,5 +72,6 @@ int main()
     fclose(ft);
     fclose(fb);
     free(a);
+    free(b);
     return 0;
 }
