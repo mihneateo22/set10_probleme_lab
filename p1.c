@@ -68,7 +68,7 @@ int main()
             }
             fclose(f_input);
             break;
-        case 5 : // subounctul c)
+        case 5 : // subpunctul c)
 
             printf("Aceasta este rezolvarea subpunctului c)\n\n");
             char cuvant1[256], cuvant2[256], curr_word[256];
@@ -84,17 +84,11 @@ int main()
             fclose(f_input);
 
             FILE *fisier = fopen("temp.txt", "wt");
-            if(fisier == NULL)
+            f_input = fopen("p1_f.txt", "rt");
+            if(fisier == NULL || f_input == NULL)
             {
                 printf("Eroare la deschidere\n");
                 exit(2);
-            }
-
-            f_input = fopen("p1_f.txt", "rt");
-            if(f_input == NULL)
-            {
-                printf("Eroare la citire\n");
-                exit(3);
             }
 
             while(fscanf(f_input, "%255s", curr_word) == 1)
@@ -116,7 +110,10 @@ int main()
             fclose(fisier);
 
             if(cnt == 0)
+            {
                 printf("Cuvantul 1 nu a putut fi gasit in fisier!\n");
+                remove("temp.txt");
+            }
             else
             {
                 remove("p1_f.txt");
