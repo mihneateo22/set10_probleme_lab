@@ -68,7 +68,7 @@ int main()
             }
             fclose(f_input);
             break;
-        case 5 :
+        case 5 : // subounctul c)
 
             printf("Aceasta este rezolvarea subpunctului c)\n\n");
             char cuvant1[256], cuvant2[256], curr_word[256];
