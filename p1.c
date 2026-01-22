@@ -122,6 +122,7 @@ int main()
             break;
         default :
             printf("Nu ati tastat o varianta valida!");
+            fclose(f_input);
             break;
     }
     return 0;
