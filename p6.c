@@ -189,6 +189,9 @@ int main()
     afisare_fisiere(&cnt_pers);
 
 
+    //subpunctul g)
+
+    
 
     free(v);
     free(y);
